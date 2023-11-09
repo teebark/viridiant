@@ -7,11 +7,18 @@
  Template:     generatepress
  Version:      0.1
 */
+:root {
+	light-blue: #5db6cd;
+	dark-blue: #0f2a51;
+	light-green: #8cc63e;
+	dark-green: #448c46;
+	yellow: #dfc822;
+}
 .site-content .content-area {
      width: 100%;
             }
 .header-widget {
-	display: flex;
+	width: 40%;
 }
 a.header-donate,
 a.header-phone {
@@ -19,8 +26,11 @@ a.header-phone {
 	color: black;
 	font-weight: 600;
 	border: 2px solid black;
-	padding: 5px 2rem;
-	margin-left: 1rem;
+	width: 170px;
+	padding: 10px 10px;
+}
+.header-donate: {
+	padding: 10px 40px;
 }
 h3.plain-black a,
 h4.plain-black {
@@ -34,6 +44,13 @@ h4.plain-white {
 	text-decoration: none;
 	color: white;
 	border: 2px solid white;
+	padding: 5px 1rem;
+}	
+h3.plain-white-green a,
+h4.plain-white-green {
+	text-decoration: none;
+	color: white;
+	border: 2px solid var(--light-green,green);
 	padding: 5px 1rem;
 }	
 /* Set gap between column blocks */
@@ -56,6 +73,12 @@ body .wp-block-columns.is-layout-flex {
 	width: 100%;
 	text-decoration: none;
 }
+/* Some sponsor logos refuse to center vertically */
+.kb-sponsors ul.kb-gallery-ul .kadence-blocks-gallery-item:nth-child(1),
+.kb-sponsors ul.kb-gallery-ul .kadence-blocks-gallery-item:nth-child(3),
+.kb-sponsors ul.kb-gallery-ul .kadence-blocks-gallery-item:nth-child(4) {
+	top: 20% !important;
+}
 .news-signup .ginput_container.ginput_container_email {
 	/* border: 2px solid red; */
 }
@@ -74,6 +97,10 @@ textarea {
 .staff .box-shadow {
     box-shadow: 0 0.5rem 1rem rgba(1, 1, 1, 0.15);
 }
+.staff .staff-pics .gb-grid-column {
+	display: flex;
+}
+
 /* Attempt to make columns same size */
 /*
 .staff .align-buttons .gb-inside-container {
@@ -81,10 +108,10 @@ textarea {
   flex-direction: column;
   height: 100%;
 }
-*/
-.align-buttons .gb-inside-container .gb-button-wrapper:last-child {
+.staff .align-buttons .gb-inside-container .gb-button-wrapper:last-child {
   margin-top: auto;
 }
+*/
 #footer-widgets {
 	background-color: #e7ebf3;
 }
@@ -94,14 +121,6 @@ textarea {
 .footer-list ul li {
 	list-style-type: disc;
 }
-/*
-.gallery-size .wp-block-gallery .wp-block-image a img {
-	border: 2px solid red;
-    height:100px;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-*/
 /* Zoom effect */
 /*
 .hover-opacity {
